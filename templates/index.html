@@ -1,0 +1,111 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>TweetsStreamer</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="/static/assets/css/main.css" />
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header">
+				<h1>Tweet Streamer</h1>
+				<nav>
+					<ul>
+						<li><a href="#intro">Intro</a></li>
+						<li><a href="#one">What I Do</a></li>
+						<li><a href="#two">Who I Am</a></li>
+						<li><a href="#work">My Work</a></li>
+						<li><a href="#contact">Contact</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Intro -->
+			<section id="intro" class="main style1 dark fullscreen">
+				<div class="content">
+					<header>
+						<h2>Hey</h2>
+					</header>
+					<p><strong><font size="5">"Twitter is where you go to see what's happening everywhere in the world right now"</font></strong></p>
+					<footer>
+						<a href="#work" class="button style2 down">More</a>
+					</footer>
+				</div>
+			</section>
+
+		<!-- Work -->
+			<section id="work" class="main style3 primary">
+				<div class="content">
+					<header>
+						<h2>My Work</h2>
+						<p>Display stream of tweets of based on searched hashtag or User Account, plot a wordcloud of the words used in tweets and analyze the sentiment of tweets </p>
+					</header>
+
+					<!-- Gallery  -->
+						<div class="gallery">
+							<article class="from-left">
+								<a href="/static/images/fulls/01.jpg" class="image fit"><img src="/static/images/download.jpg" title="The Anonymous Red" alt="" /></a>
+							</article>
+							<article class="from-right">
+								<a href="/static/images/fulls/02.jpg" class="image fit"><img src="/static/images/performing-twitter-sentiment-analysis1.jpg" title="Airchitecture II" alt="" /></a>
+							</article>
+							<article class="from-left">
+								<a href="/static/images/fulls/03.jpg" class="image fit"><img src="/static/images/success-word-cloud.jpg" title="Air Lounge" alt="" /></a>
+							</article>
+							<article class="from-right">
+								<a href="/static/images/fulls/04.jpg" class="image fit"><img src="/static/images/Twitter-Hashtag-Search.jpg" title="Carry on" alt="" /></a>
+							</article>
+							
+						</div>
+
+				</div>
+			</section>
+
+			<section id="contact" class="main style3 secondary">
+				<div class="content">
+					<header>
+						<h2>what's your Query</h2>
+						<p>Starting with one of our adjustable search is the easiest way where people share their thoughts, see what's happening in the world and who is talking about whom</p>
+					</header>
+					<div class="box">
+						<form method="post" action="/tweet">
+							<div class="field half first"><input type="text" name="name" placeholder="Enter Query to get started" /></div>
+							<ul class="actions">
+								<li><input type="submit" name="my-form" value="Search"></li>
+							</ul>
+						</form>
+					</div>
+				</div>
+			</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+
+				<!-- Icons -->
+					<ul class="actions">
+						<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+						<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
+						<li><a href="#" class="icon fa-pinterest"><span class="label">Pinterest</span></a></li>
+					</ul>
+
+				
+
+			</footer>
+
+		<!-- Scripts -->
+			<script src="/static/assets/js/jquery.min.js"></script>
+			<script src="/static/assets/js/jquery.poptrox.min.js"></script>
+			<script src="/static/assets/js/jquery.scrolly.min.js"></script>
+			<script src="/static/assets/js/jquery.scrollex.min.js"></script>
+			<script src="/static/assets/js/skel.min.js"></script>
+			<script src="/static/assets/js/util.js"></script>
+			<script src="/static/assets/js/main.js"></script>
+
+	</body>
+</html>
