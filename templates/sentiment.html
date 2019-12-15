@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Tweet Streamer</title>
+    <title>Tweet Sentiments</title>
 
     <!-- Bootstrap 4 Stuff https://v4-alpha.getbootstrap.com/  --> 
     <link rel="stylesheet"
@@ -15,18 +15,14 @@
   </head>
   <body>
     <div class="container">
-      <h1 class="p-3">Tweet Streamer</h1>
-      {% for tweet in tweets %}
+      <h1 class="p-3">Tweet Sentiments</h1>
+      {% for sentiment in sentiments %}
       <div class="list-group">
          <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
            <div class="d-flex w-100 justify-content-between">
-            <form method="post" action="/sentiment">
-                <input type="submit" name="my-form" value="Analyse Sentiment">
-                <input type="hidden" name="result" value="{{tweet.tweet}}"> 
-              </form>
-             <img src="{{tweet.headshot_url}}" class="w-12 p-1 float-left image-thumbnail">  
-             <h5 class="ml-10 w-75 mb-1">{{ tweet.tweet }}</h5>
-             <small>{{ tweet.created_at }}</small>
+            
+             <h5 class="ml-10 w-75 mb-1">{{sentiment}}</h5>
+             
            </div>
          </a>
       </div>

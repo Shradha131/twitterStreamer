@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-
+from pycorenlp import StanfordCoreNLP
 import configparser
 import tweepy
 
@@ -35,6 +35,32 @@ def get_tweets(username):
     'headshot_url': t.user.profile_image_url}
     for t in tweets]
 
+@app.route('/sentiment' , methods=['GET', 'POST'])
+def sentiments():
+    print('---------------------------')
+    text=request.form['result']
+    print(text)
+    return render_template("sentiment.html", sentiments=get_sentiments(text))
+
+def get_sentiments(tweet):
+    text= tweet
+    nlp = StanfordCoreNLP('http://localhost:9000')
+    result = nlp.annotate(text,
+                   properties={
+                       'annotators': 'sentiment',
+                       'outputFormat': 'json',
+                       'timeout': 1000,
+                   })
+    print(result)
+    for s in result["sentences"]:
+        print("{}: '{}': {} (Sentiment Value) {} (Sentiment)".format(
+            s["index"],
+            " ".join([t["word"] for t in s["tokens"]]),
+            s["sentimentValue"], s["sentiment"]))
+    return [{
+            " ".join([t["word"] for t in s["tokens"]]),
+            s["sentiment"]}
+    for s in result["sentences"]]
 @app.route('/backk', methods=['GET'])
 def backk():
     return render_template('index.html')
