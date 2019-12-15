@@ -24,6 +24,11 @@
                 <input type="submit" name="my-form" value="Analyse Sentiment">
                 <input type="hidden" name="result" value="{{tweet.tweet}}"> 
               </form>
+              <form method="post" action="/wordcloud">
+                <input type="submit" name="my-form" value="Show wordCloud">
+                <input type="hidden" name="resultWord" value="{{tweet.tweet}}"> 
+                <input type="hidden" name="search" value="{{search}}"> 
+              </form>
              <img src="{{tweet.headshot_url}}" class="w-12 p-1 float-left image-thumbnail">  
              <h5 class="ml-10 w-75 mb-1">{{ tweet.tweet }}</h5>
              <small>{{ tweet.created_at }}</small>
